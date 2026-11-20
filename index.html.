@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>نادي المُعين | AL-MU'ĪN — الإقامة الجامعية 19 ماي 1956</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --plum: #3b1c4a;
+      --plum-dark: #250f30;
+      --plum-soft: #562b6b;
+      --cream: #fbf6ee;
+      --cream-card: #fffdf9;
+      --sand: #efe4d2;
+      --ink: #1e1524;
+      --muted: #5d5066;
+      --accent: #b87b3b;
+      --border: rgba(59, 28, 74, 0.14);
+      --shadow: 0 14px 34px rgba(37, 15, 48, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
