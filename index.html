@@ -772,5 +772,41 @@
 
       <div class="id-card-preview">
         <div class="brand-latin" style="font-size:0.85rem; color:#f3d2a2;">AL-MU'ĪN MEMBERSHIP PASS</div>
+        function getMembershipCode() {
+  // إذا كان لديك عنصر يظهر فيه رمز العضوية مثل MUIN-2026-XXXX فاقرأه من هنا
+  const codeEl = document.getElementById("membershipCode");
+  if (codeEl && codeEl.textContent.trim()) {
+    return codeEl.textContent.trim();
+  }
+  const randomNum = Math.floor(1000 + Math.random() * 9000);
+  return `MUIN-2026-${randomNum}`;
+}
+
+function sendToWhatsApp() {
+  const fullName = document.getElementById("fullName")?.value.trim() || "";
+  const room = document.getElementById("room")?.value.trim() || "";
+  const committee = document.getElementById("committee")?.value.trim() || "";
+
+  if (!fullName || !room || !committee) {
+    alert("يرجى ملء الاسم الكامل، الجناح/الغرفة، واختيار اللجنة المرغوبة أولاً.");
+    return;
+  }
+
+  const code = getMembershipCode();
+  const adminPhone = "213XXXXXXXXX"; // ضع رقم الواتساب هنا بالصيغة الدولية
+
+  const message =
+    `طلب انضمام جديد - نادي المعين (19 ماي 1956)\n` +
+    `━━━━━━━━━━━━━━━\n` +
+    `الاسم الكامل: ${fullName}\n` +
+    `الجناح / الغرفة: ${room}\n` +
+    `اللجنة المرغوبة: ${committee}\n` +
+    `رمز العضوية الصادر: ${code}`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/${adminPhone}?text=${encodedMessage}`;
+
+  window.open(whatsappUrl, "_blank");
+}
         <h3 class="display-
 index.html
