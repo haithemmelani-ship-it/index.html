@@ -802,7 +802,9 @@ function sendToWhatsApp() {
     `الجناح / الغرفة: ${room}\n` +
     `اللجنة المرغوبة: ${committee}\n` +
     `رمز العضوية الصادر: ${code}`;
-
+<button id="whatsappBtn" type="button" onclick="sendToWhatsApp()">
+  إرسال طلب الانضمام عبر واتساب
+</button>
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${adminPhone}?text=${encodedMessage}`;
 
