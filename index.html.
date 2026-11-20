@@ -28,4 +28,748 @@
       padding: 0;
     }
 
-index.html
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'Cairo', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    .brand-latin {
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.08em;
+    }
+
+    .display-ar {
+      font-family: 'Aref Ruqaa', 'Cairo', serif;
+    }
+
+    .slant-banner {
+      background: linear-gradient(125deg, var(--plum-dark) 0%, var(--plum) 65%, var(--plum-soft) 100%);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slant-divider {
+      height: 44px;
+      background: var(--cream);
+      clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+      margin-top: -43px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .dotted-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--plum);
+    }
+
+    .dotted-arrow::after {
+      content: "";
+      width: 34px;
+      border-top: 2.5px dotted var(--accent);
+      display: inline-block;
+    }
+
+    .dotted-arrow .tip {
+      margin-right: -4px;
+      color: var(--accent);
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 246, 238, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--plum);
+    }
+
+    .logo-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--plum);
+      color: var(--cream);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      transform: skewX(-6deg);
+      box-shadow: 0 6px 16px rgba(59, 28, 74, 0.22);
+    }
+
+    .logo-text strong {
+      display: block;
+      font-size: 1.15rem;
+      line-height: 1.15;
+    }
+
+    .logo-text span {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    nav.main-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    nav.main-nav a {
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    nav.main-nav a:hover {
+      background: var(--sand);
+      color: var(--plum);
+    }
+
+    nav.main-nav a.cta-pill {
+      background: var(--plum);
+      color: var(--cream);
+    }
+
+    nav.main-nav a.cta-pill:hover {
+      background: var(--plum-soft);
+    }
+
+    .hero {
+      padding: 4.2rem 1.25rem 5.4rem;
+    }
+
+    .hero-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.35fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .kicker {
+      display: inline-block;
+      background: rgba(251, 246, 238, 0.14);
+      border: 1px solid rgba(251, 246, 238, 0.28);
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      transform: skewX(-5deg);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.2;
+      margin-bottom: 0.65rem;
+    }
+
+    .hero-sub {
+      color: #ebd9c0;
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.72rem 1.35rem;
+      border-radius: 12px;
+      font-family: 'Cairo', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: transform 0.15s ease, background 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-cream {
+      background: var(--cream);
+      color: var(--plum-dark);
+    }
+
+    .btn-cream:hover {
+      background: var(--sand);
+    }
+
+    .btn-outline-light {
+      background: transparent;
+      color: var(--cream);
+      border: 1.5px solid rgba(251, 246, 238, 0.45);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(251, 246, 238, 0.12);
+    }
+
+    .btn-plum {
+      background: var(--plum);
+      color: var(--cream);
+    }
+
+    .btn-plum:hover {
+      background: var(--plum-soft);
+    }
+
+    .hero-card {
+      background: rgba(255, 253, 249, 0.1);
+      border: 1px solid rgba(251, 246, 238, 0.22);
+      border-radius: 20px;
+      padding: 1.5rem;
+      transform: rotate(-1.5deg);
+    }
+
+    .hero-card-inner {
+      transform: rotate(1.5deg);
+    }
+
+    .hero-card .latin-mark {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #f3d2a2;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card p {
+      font-size: 0.92rem;
+      color: var(--cream);
+      opacity: 0.92;
+      margin-bottom: 1rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .stat-box {
+      background: rgba(37, 15, 48, 0.45);
+      border-radius: 12px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .stat-box strong {
+      display: block;
+      font-size: 1.25rem;
+      color: #f3d2a2;
+    }
+
+    .stat-box span {
+      font-size: 0.78rem;
+      opacity: 0.85;
+    }
+
+    section.content-section {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 3.4rem 1.25rem;
+    }
+
+    .section-head {
+      margin-bottom: 1.8rem;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.55rem, 3.2vw, 2.2rem);
+      color: var(--plum);
+      margin-top: 0.25rem;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      max-width: 680px;
+      margin-top: 0.35rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.35rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--cream-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .card.slanted-accent {
+      border-right: 5px solid var(--plum);
+    }
+
+    .card h3 {
+      color: var(--plum);
+      font-size: 1.15rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-btn {
+      background: var(--cream-card);
+      color: var(--plum);
+      border: 1px solid var(--border);
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-family: 'Cairo', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--plum);
+      color: var(--cream);
+      border-color: var(--plum);
+    }
+
+    .event-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.85rem 0 1rem;
+      font-size: 0.84rem;
+      color: var(--plum);
+      font-weight: 700;
+      background: var(--sand);
+      padding: 0.45rem 0.75rem;
+      border-radius: 10px;
+    }
+
+    .tag-pill {
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--plum);
+      background: var(--sand);
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 0.6rem;
+    }
+
+    .membership-panel {
+      background: var(--cream-card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 1.8rem;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.8rem;
+      align-items: start;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--plum);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 0.68rem 0.85rem;
+      border-radius: 11px;
+      border: 1px solid rgba(59, 28, 74, 0.25);
+      background: #fff;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: 2px solid var(--plum);
+      border-color: var(--plum);
+    }
+
+    .id-card-preview {
+      background: linear-gradient(135deg, var(--plum-dark), var(--plum));
+      color: var(--cream);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .id-badge-code {
+      margin-top: 1rem;
+      background: rgba(251, 246, 238, 0.14);
+      border: 1px dashed rgba(243, 210, 162, 0.7);
+      border-radius: 12px;
+      padding: 0.85rem;
+      text-align: center;
+    }
+
+    .id-badge-code span {
+      display: block;
+      font-size: 0.8rem;
+      color: #ebd9c0;
+    }
+
+    .id-badge-code strong {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      color: #f3d2a2;
+      letter-spacing: 0.06em;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(24, 9, 32, 0.62);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      z-index: 100;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--cream-card);
+      color: var(--ink);
+      border-radius: 20px;
+      max-width: 460px;
+      width: 100%;
+      padding: 1.6rem;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--sand);
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-weight: 800;
+      color: var(--plum);
+      cursor: pointer;
+    }
+
+    .status-msg {
+      margin-top: 0.85rem;
+      padding: 0.7rem 0.9rem;
+      border-radius: 11px;
+      background: #eef7f0;
+      color: #1c5c2e;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    .status-msg.show {
+      display: block;
+    }
+
+    footer.site-footer {
+      background: var(--plum-dark);
+      color: var(--cream);
+      padding: 2.2rem 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner p {
+      font-size: 0.88rem;
+      opacity: 0.86;
+    }
+
+    @media (max-width: 820px) {
+      .hero-inner,
+      .membership-panel {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="#top" class="logo-box">
+        <div class="logo-badge display-ar">م</div>
+        <div class="logo-text">
+          <strong class="display-ar">نادي المُعين</strong>
+          <span class="brand-latin">AL-MU'ĪN • 19 MAI 1956</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="#about">الهيئة والتعريف</a>
+        <a href="#values">القيم</a>
+        <a href="#activities">الأنشطة والفعاليات</a>
+        <a href="#committees">اللجان الأربع</a>
+        <a href="#membership" class="cta-pill">بوابة العضوية</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" class="slant-banner hero">
+    <div class="hero-inner">
+      <div>
+        <div class="kicker">الإقامة الجامعية 19 ماي 1956 — ولاية النعامة</div>
+        <h1 class="display-ar">نادي المُعين</h1>
+        <p class="hero-sub">
+          فضاء طلابي جامعي يجمع بين المبادرة الفكرية والعمل التطوعي والتأطير الثقافي والعلمي داخل الإقامة الجامعية، لنكون عوناً للطلبة في مسارهم الجامعي والحياتي.
+        </p>
+        <div class="hero-actions">
+          <a href="#activities" class="btn btn-cream">استعراض الأنشطة وحجز مقعد</a>
+          <a href="#membership" class="btn btn-outline-light">الانضمام عبر بوابة العضوية</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-inner">
+          <div class="latin-mark brand-latin">AL-MU'ĪN CLUB</div>
+          <p>
+            نعمل بروح الفريق داخل الإقامة الجامعية 19 ماي 1956 بولاية النعامة لتقديم مبادرات عملية، ورشات تكوينية، وأنشطة هادفة.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-box">
+              <strong>4</strong>
+              <span>لجان تنظيمية</span>
+            </div>
+            <div class="stat-box">
+              <strong class="brand-latin">2026</strong>
+              <span>الموسم الجامعي</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="slant-divider"></div>
+
+  <section id="about" class="content-section">
+    <div class="section-head">
+      <div class="dotted-arrow">الهيئة والتعريف <span class="tip">▸</span></div>
+      <h2>من نحن وما رسالتنا؟</h2>
+      <p>
+        تأسس نادي المُعين ليكون جسر تعاون ومرافقة لطلبة الإقامة الجامعية 19 ماي 1956 بولاية النعامة، عبر تحويل الأفكار الطلابية إلى مشاريع وأنشطة ملموسة.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card slanted-accent">
+        <h3>رؤية النادي</h3>
+        <p>
+          بناء مجتمع جامعي متضامن ومبادر داخل الإقامة الجامعية، يجمع بين التميز الأكاديمي، الحس المدني، والابتكار في خدمة الطالب والمحيط.
+        </p>
+      </div>
+      <div class="card slanted-accent">
+        <h3>الهيئة والتأطير</h3>
+        <p>
+          يضم النادي هيئة إدارية ومنسقين طلابيين يشرفون على تخطيط الفعاليات، متابعة اللجان، وتنظيم الحضور والتسجيل في الأنشطة الجامعية.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="values" class="content-section">
+    <div class="section-head">
+      <div class="dotted-arrow">القيم المؤسسية <span class="tip">▸</span></div>
+      <h2>ركائز عملنا اليومي</h2>
+    </div>
+
+    <div class="grid-4">
+      <div class="card">
+        <span class="tag-pill">01 • العون</span>
+        <h3>المساندة والتكافل</h3>
+        <p>مد يد العون للطالب الجامعي في التوجيه، تبادل المعارف، والعمل الجماعي داخل الإقامة.</p>
+      </div>
+      <div class="card">
+        <span class="tag-pill">02 • الانضباط</span>
+        <h3>الالتزام والمصداقية</h3>
+        <p>احترام المواعيد، وضوح المسؤوليات، والشفافية في تنظيم المبادرات والفعاليات.</p>
+      </div>
+      <div class="card">
+        <span class="tag-pill">03 • المبادرة</span>
+        <h3>الإبداع والفعالية</h3>
+        <p>تشجيع الأفكار الجديدة وتحويلها إلى ورشات وحلقات نقاش وأنشطة تفاعلية مفيدة.</p>
+      </div>
+      <div class="card">
+        <span class="tag-pill">04 • الانتماء</span>
+        <h3>روح الفريق الواحد</h3>
+        <p>تعزيز الروابط الأخوية بين طلبة الإقامة الجامعية 19 ماي 1956 في ولاية النعامة.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" class="content-section">
+    <div class="section-head">
+      <div class="dotted-arrow">الأنشطة والفعاليات <span class="tip">▸</span></div>
+      <h2>برنامج الفعاليات وحجز المقاعد</h2>
+      <p>اختر التصنيف المناسب لتصفية الأنشطة، ثم اضغط على "حجز مقعد" لتثبيت حضورك في الفعالية.</p>
+    </div>
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">الكل</button>
+      <button class="filter-btn" data-filter="علمي">علمي وتكويني</button>
+      <button class="filter-btn" data-filter="ثقافي">ثقافي وفكري</button>
+      <button class="filter-btn" data-filter="تطوعي">تطوعي واجتماعي</button>
+    </div>
+
+    <div class="grid-2" id="eventsGrid"></div>
+  </section>
+
+  <section id="committees" class="content-section">
+    <div class="section-head">
+      <div class="dotted-arrow">اللجان الأربع <span class="tip">▸</span></div>
+      <h2>توزيع المهام داخل النادي</h2>
+      <p>يتوزع العمل داخل نادي المُعين على أربع لجان متكاملة لضمان جودة التنظيم والتنفيذ.</p>
+    </div>
+
+    <div class="grid-4">
+      <div class="card">
+        <h3>اللجنة العلمية والتكوينية</h3>
+        <p>إعداد الورشات، الدورات التطبيقية، المرافقة المنهجية، والمحاضرات الطلابية.</p>
+      </div>
+      <div class="card">
+        <h3>اللجنة الثقافية والإعلامية</h3>
+        <p>تغطية الفعاليات، تصميم المواد البصرية، تنظيم الأمسيات الفكرية والمسابقات.</p>
+      </div>
+      <div class="card">
+        <h3>اللجنة الاجتماعية والتطوعية</h3>
+        <p>تنظيم المبادرات التضامنية، الأنشطة الترفيهية، ودعم روح التعاون بالإقامة.</p>
+      </div>
+      <div class="card">
+        <h3>لجنة التنظيم واللوجستيك</h3>
+        <p>تجهيز القاعات، إدارة المقاعد والحضور، وتنسيق الجداول الزمنية للفعاليات.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="membership" class="content-section">
+    <div class="section-head">
+      <div class="dotted-arrow">بوابة العضوية <span class="tip">▸</span></div>
+      <h2>تقديم طلب انخراط واستخراج رمز العضوية</h2>
+      <p>أدخل بياناتك لاختيار اللجنة المناسبة وتوليد رمز عضوية فوري بصيغة <strong class="brand-latin">MUIN-2026-XXXX</strong>.</p>
+    </div>
+
+    <div class="membership-panel">
+      <form id="membershipForm">
+        <div class="form-group">
+          <label for="memberName">الاسم الكامل</label>
+          <input type="text" id="memberName" placeholder="مثال: هيثم ملياني" required />
+        </div>
+        <div class="form-group">
+          <label for="memberRoom">الجناح / الغرفة بالإقامة الجامعية</label>
+          <input type="text" id="memberRoom" placeholder="مثال: جناح ب - غرفة 14" required />
+        </div>
+        <div class="form-group">
+          <label for="memberCommittee">اللجنة المرغوبة</label>
+          <select id="memberCommittee" required>
+            <option value="اللجنة العلمية والتكوينية">اللجنة العلمية والتكوينية</option>
+            <option value="اللجنة الثقافية والإعلامية">اللجنة الثقافية والإعلامية</option>
+            <option value="اللجنة الاجتماعية والتطوعية">اللجنة الاجتماعية والتطوعية</option>
+            <option value="لجنة التنظيم واللوجستيك">لجنة التنظيم واللوجستيك</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-plum">إصدار رمز العضوية</button>
+        <div class="status-msg" id="membershipStatus"></div>
+      </form>
+
+      <div class="id-card-preview">
+        <div class="brand-latin" style="font-size:0.85rem; color:#f3d2a2;">AL-MU'ĪN MEMBERSHIP PASS</div>
+        <h3 class="display-
